@@ -6,7 +6,7 @@ using UnityEngine;
 public class DelegateControl : MonoBehaviour
 {
     //define the delegate
-    public delegate void DelegateExample(); //simplet
+    public delegate void DelegateExample(); //simple
     public delegate int IReturnAnInt(); //return value
     public delegate void IHaveInputs(int number, string text);//parameter
     public delegate void MulticastDelegate();//Multicast Delegate
@@ -17,7 +17,10 @@ public class DelegateControl : MonoBehaviour
     public IHaveInputs haveInputs;
     public MulticastDelegate multicastDelegate;
 
-    public static DelegateExample myStaticDelegate;// static instance
+    // static instance
+    public static DelegateExample myStaticDelegate;
+    public static IReturnAnInt myStaticReturnValue;
+
     //
     int numberReturn = 0;
 
@@ -39,7 +42,7 @@ public class DelegateControl : MonoBehaviour
     {
         multicastDelegate -= Func001;
         multicastDelegate -= Func002;
-        myStaticDelegate -= TestDelegate;
+        //myStaticDelegate -= TestDelegate;
     }
 
     private void Update()
